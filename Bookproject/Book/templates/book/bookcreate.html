@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <title>Books</title>
+</head>
+<body>
+
+<div class="container">
+    <h1> create book!</h1>
+    <h1>welcome {{request.user}}</h1>
+    <button type="submit"> <a href="{%url 'out'%}">logout</a></button>
+        <div class="row">
+
+            <div class="col-lg-6 crt">
+                <form action="" method="post">
+
+                {%csrf_token%}
+                {{form.as_p}}
+                    <input type="submit" id="btt" value="create">
+                </form>
+
+
+
+            </div>
+            <div class="col-lg-6 tbl">
+
+                    <table class="table table-striped">
+                    <tr>
+                         <td>BookName</td>
+                         <td>Author</td>
+                         <td>Price</td>
+                         <td>Pages</td>
+                         <td>Category</td>
+                     </tr>
+
+                        {%for book in object_list%}
+                    <tr>
+                        <td>{{book.book_name}}</td>
+                        <td>{{book.author}}</td>
+                        <td>{{book.price}}</td>
+                        <td>{{book.pages}}</td>
+                        <td>{{book.category}}</td>
+                        <td><a href="{%url 'clsdetail' book.id%}">view</a> </td>
+                        <td><a href="{%url 'clsupdate' book.id%}">update</a> </td>
+                        <td><a href="{%url 'clsdelete' book.id%}">delete</a> </td>
+
+                    </tr>
+                        {%endfor%}
+                    </table>
+
+            </div>
+
+
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

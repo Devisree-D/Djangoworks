@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>feedback</title>
+    <link rel="stylesheet" href="{%static 'css/studfb.css'%}">
+</head>
+<body>
+<h1>FEEDBACK</h1>
+<div class="container box">
+    <form action="{%url 'fb'%}" method="post">
+        {%csrf_token%}
+        <div class="mb-3">
+            <label for="">student_name</label>
+            <input type="text" style="margin-top:2%" name="stud">
+        </div>
+        <div class="mb-3">
+            <label for="">faculty_name</label>
+            <input type="text" style="margin-top:2%" name="fac">
+        </div>
+        <div class="mb-3">
+            <label for="">post your feedback</label>
+            <input id="fbbox" type="text" style="" name="fb">
+        </div>
+        <input type="submit" style="margin-top:2%" value="submit">
+    </form>
+</div>
+
+</body>
+</html>

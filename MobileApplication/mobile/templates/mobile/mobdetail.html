@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'mobile/base.html'%}
+
+{%block body_block%}
+
+<h1 style="margin-top:2%">Details of {{mobile.mobile_name}}</h1>
+<div class="container">
+
+     <table>
+         <td><tr>Model:{{mobile.model_name}}</tr><br>
+         <tr>Price: {{mobile.price}}</tr><br>
+        <tr>Brand: {{mobile.brand}}</tr><br>
+        <tr>Specifications: {{mobile.specs}}</tr><br>
+        <tr>Description: {{mobile.description}}</tr><br>
+         </td><br>
+
+        <td><img src="{{mobile.img.url}}" style="height:300px" >
+           <button id="p1" type="submit"><a href="{%url 'purchase' mobile.id%}" style="color:white">purchase item</a></button>
+        </td>
+    </table>
+
+
+
+</div>
+
+
+
+
+{% endblock %}

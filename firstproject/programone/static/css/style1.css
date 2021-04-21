@@ -1,0 +1,16 @@
+body{
+background-color:grey;
+margin-top:5%;
+margin-left:40%}
+.box{
+padding-top:10%;
+width:400px;
+height:200px;
+margin-top:10%;
+color:blue;
+text-align:center;
+border-style:solid;
+background-color:white;}
+h1{
+margin-left:8%;
+color:red;}

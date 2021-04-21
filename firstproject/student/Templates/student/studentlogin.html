@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{%static 'css/studentlogin.css'%}">
+</head>
+<body>
+<h1>Please login</h1>
+<form action="" method="post">
+    {%csrf_token%}
+    <table class="mytable">
+        {{form.as_table}}
+    </table>
+    <div class="btn">
+        <input type="submit" value="login">
+    </div>
+
+</form>
+</body>
+</html>

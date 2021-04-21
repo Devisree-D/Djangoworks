@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+{% extends 'mobile/base.html'%}
+
+{%block body_block%}
+
+<h1> login here!</h1>
+<div class="container">
+    <form action="" method="post">
+    {%csrf_token%}
+   <input class="form-control" id="log" type="text" name="uname" placeholder="username">
+   <input class="form-control" id="log" type="password" name="pwd" placeholder="password">
+    <input type="submit" id="p2" value="submit">
+
+</form>
+    <label>Don't have a ac? <button type="submit"><a href="{%url 'register'%}"}>New account</a></button></label>
+
+</div>
+
+{% endblock %}

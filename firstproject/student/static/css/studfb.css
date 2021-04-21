@@ -1,0 +1,13 @@
+body{text-align:center;
+background-color:green;}
+.box{
+width:600px;
+height:300px;
+margin-left:30%;
+padding-top:5%;
+background-color:pink;}
+#fbbox{
+width:300px;
+height:100px;
+margin-top:2%;
+}

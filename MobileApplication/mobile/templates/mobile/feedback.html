@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'mobile/base.html'%}
+
+{%block body_block%}
+
+<h1>Send us your feedback!</h1>
+<div class="container">
+    <form action="" method="post">
+    {%csrf_token%}
+    <label>feedback</label><br>
+        <input type="text" style="width:400px; height:400px" placeholder="type your views here.." name="fd">
+        <input type="submit" value="send">
+</form>
+
+</div>
+
+{% endblock %}

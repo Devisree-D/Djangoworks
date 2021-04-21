@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'mobile/base.html'%}
+
+{%block body_block%}
+
+<h1>Place order</h1>
+<div class="container">
+    <table>
+        <tr><td> <img src="{{items.img.url}}" style="height:300px" >
+
+           <td>
+               <form action="" method="post" id="orderitem">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" name="confirm" id="p4">
+
+         </form>
+           </td>
+        </tr>
+    </table>
+
+    </div>
+
+</div>
+
+
+{% endblock %}

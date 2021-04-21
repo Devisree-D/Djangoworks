@@ -1,0 +1,15 @@
+body{
+margin-top:5%;
+margin-left:30%}
+.box{
+padding-top:5%;
+width:500px;
+height:300px;
+margin-top:10%;
+color:green;
+text-align:center;
+border-style:solid;
+background-color:yellow;}
+h1{
+margin-left:8%;
+color:blue;}

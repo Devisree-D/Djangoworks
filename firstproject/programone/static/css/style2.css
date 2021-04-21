@@ -1,0 +1,16 @@
+body{
+text-align:center;
+color:green;
+margin-top:5%;
+background-image:url("formaths.jpg");
+}
+.box{
+font-size:30px;
+width:400px;
+height:300px;
+background-color:#f2e9e1;
+margin-left:35%;
+
+}
+.btt{
+margin-top:5%;}

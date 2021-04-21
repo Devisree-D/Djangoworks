@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'mobile/base.html'%}
+
+{%block body_block%}
+
+<h1> Update brand!</h1>
+
+<form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="ok">
+</form>
+
+{% endblock %}
